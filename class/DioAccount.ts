@@ -17,10 +17,11 @@ export abstract class DioAccount {
   getName = (): string => {
     return this.name
   }
-
-  deposit = (): void => {
+  // Os valores dos saldos devem ser alterados, de acordo com o valor informado para depósito
+  deposit = (value:number): void => {
     if(this.validateStatus()){
-      console.log('Voce depositou')
+      this.balance = value
+      console.log(`Você depositou R$ ${value}. Saldo disponível: R$ ${this.balance}.`);  
     }
   }
 
