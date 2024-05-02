@@ -12,7 +12,7 @@ export abstract class DioAccount {
 
   setName = (name: string): void => {
     this.name = name
-    console.log('Nome alterado com sucesso!')
+    console.log('Nome alterado com sucesso! O nome da sua conta agora é ' + this.name + '.')
   }
 
   getName = (): string => {
@@ -22,23 +22,23 @@ export abstract class DioAccount {
   deposit = (value: number): void => {
     if(this.validateStatus()){
       this.changingBalance(value, true)
-      console.log(`Você depositou R$ ${value}. Saldo disponível: R$ ${this.balance}.`);  
+      console.log(`${this.name} depositou R$ ${value}. Saldo disponível: R$ ${this.balance}.`);  
       return
     }
-    console.log("Depósito não permitido. Conta desativada.");    
+    console.log(`${this.name} está desativada. Depósito não permitido.`);    
   }
 
   withdraw = (value: number): void => {
     if (this.status && this.balance >= value) {
       this.changingBalance(value, false)
-      console.log(`Você sacou R$ ${value}. Saldo disponível: R$ ${this.balance}.`)
+      console.log(`${this.name} sacou R$ ${value}. Saldo disponível: R$ ${this.balance}.`)
       return
     }
     if (!this.status) {
-      console.log("Saque não permitido. Conta desativada.");
+      console.log(`${this.name} está desativada. Saque não permitido.`);    
       return
     }
-    console.log("Saldo insuficiente para o valor solicitado.")
+    console.log(`${this.name} não possui saldo suficiente para o valor de saque solicitado.`);    
   }
 
   getBalance = (): number => {
