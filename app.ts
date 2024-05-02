@@ -12,4 +12,6 @@ companyAccount.withdraw(100)
 const companyTeste: CompanyAccount = new CompanyAccount('dio 2', 3, false)
 companyTeste.deposit(10)
 companyTeste.withdraw(2)
+companyAccount.getLoan(1000)
+companyTeste.getLoan(1000)
 
