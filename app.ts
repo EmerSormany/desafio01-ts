@@ -1,3 +1,4 @@
+import { AccountBonus } from './class/AccountBonus'
 import { CompanyAccount } from './class/CompanyAccount'
 import { PeopleAccount } from './class/PeopleAccount'
 
@@ -9,9 +10,11 @@ companyAccount.deposit(100)
 // console.log(companyAccount)
 peopleAccount.withdraw(100)
 companyAccount.withdraw(100)
-const companyTeste: CompanyAccount = new CompanyAccount('dio 2', 3, false)
+const companyTeste: CompanyAccount = new CompanyAccount('DIO 2', 3, false)
 companyTeste.deposit(10)
 companyTeste.withdraw(2)
 companyAccount.getLoan(1000)
 companyTeste.getLoan(1000)
+const bonusAccount: AccountBonus = new AccountBonus('Teste', 4, true)
+bonusAccount.deposit(10)
 
