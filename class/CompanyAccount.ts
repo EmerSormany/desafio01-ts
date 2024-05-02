@@ -7,8 +7,8 @@ export class CompanyAccount extends DioAccount {
   }
   getLoan = (value:number): void => {
     if (this.validateStatus()) {
-      this.balance += value
-      console.log(`Você fez um empréstimo de R$ ${value}. Saldo disponível: R$ ${this.balance}.`)
+      this.changingBalance(value, true)
+      console.log(`Você fez um empréstimo de R$ ${value}. Saldo disponível: R$ ${this.getBalance()}.`)
       return
     }
     console.log("Empréstimo não permitido. Conta desativada.");

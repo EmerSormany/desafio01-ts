@@ -2,11 +2,11 @@ import { CompanyAccount } from './class/CompanyAccount'
 import { PeopleAccount } from './class/PeopleAccount'
 
 const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Nath', 10, true)
-console.log(peopleAccount)
+// console.log(peopleAccount)
 peopleAccount.deposit(100)
 const companyAccount: CompanyAccount = new CompanyAccount('DIO', 20, true)
 companyAccount.deposit(100)
-console.log(companyAccount)
+// console.log(companyAccount)
 peopleAccount.withdraw(100)
 companyAccount.withdraw(100)
 const companyTeste: CompanyAccount = new CompanyAccount('dio 2', 3, false)
