@@ -38,7 +38,7 @@ export abstract class DioAccount {
       console.log(`${this.name} está desativada. Saque não permitido.`);    
       return
     }
-    console.log(`${this.name} não possui saldo suficiente para o valor de saque solicitado.`);    
+    console.log(`${this.name} não possui saldo suficiente para o valor de R$ ${value} de saque solicitado.`);    
   }
 
   getBalance = (): number => {
